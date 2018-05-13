@@ -14,12 +14,15 @@ Library to convert Draft.js ContentState to HTML
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/draftjs_exporter-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/draftjs_exporter-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/draftjs_exporter-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/draftjs_exporter-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/draftjs_exporter/badges/version.svg)](https://anaconda.org/conda-forge/draftjs_exporter)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/draftjs_exporter/badges/downloads.svg)](https://anaconda.org/conda-forge/draftjs_exporter)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-draftjs_exporter-green.svg)](https://anaconda.org/conda-forge/draftjs_exporter) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/draftjs_exporter.svg)](https://anaconda.org/conda-forge/draftjs_exporter) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/draftjs_exporter.svg)](https://anaconda.org/conda-forge/draftjs_exporter) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/draftjs_exporter.svg)](https://anaconda.org/conda-forge/draftjs_exporter) |
 
 Installing draftjs_exporter
 ===========================
