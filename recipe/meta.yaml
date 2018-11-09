@@ -1,6 +1,6 @@
 {% set name = "draftjs_exporter" %}
-{% set version = "2.1.2" %}
-{% set sha256 = "d2ceeef98185ba02355496851aee17d25951f5d8c72c12f8af6c186e312e9598" %}
+{% set version = "2.1.4" %}
+{% set sha256 = "1a4252b40bd3b6d251969e9fa59965a617108d48661367ab8406322422600fad" %}
 
 package:
   name: {{ name|lower }}
