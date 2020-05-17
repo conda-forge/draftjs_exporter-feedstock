@@ -1,6 +1,6 @@
 {% set name = "draftjs_exporter" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "e98d3ff0af0974c3f3640145e194e5fb0ae2aa8a9ddc403e5fd9c9c0200bc176" %}
+{% set version = "4.0.0" %}
+{% set sha256 = "843004e5628f3cda8de39f0d3a8ca923d737140681ee2db64c017395c59c8027" %}
 
 package:
   name: {{ name|lower }}
@@ -47,9 +47,8 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Library to convert Draft.js ContentState to HTML'
-  description: 
-    Library to convert Draft.js ContentState to HTML
+  summary: Library to convert Draft.js ContentState to HTML
+  description: Library to convert Draft.js ContentState to HTML
   doc_url: https://github.com/springload/draftjs_exporter
   dev_url: https://github.com/springload/draftjs_exporter
 
