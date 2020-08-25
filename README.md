@@ -5,7 +5,7 @@ Home: https://github.com/springload/draftjs_exporter
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Library to convert Draft.js ContentState to HTML
 
