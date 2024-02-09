@@ -30,30 +30,29 @@ test:
     - pip check
   requires:
     - pip
-# Required for running the tests.
-    - pytest ==7.4.3
-    - pytest-cov ==4.1.0
-    - pytest-memray ==1.5.0
-    - tox ==4.11.4
-    - python-build ==1.0.3
-    - setuptools ==69.0.3
-# HTML builders.
-# Keep this in sync with the dependencies in setup.py, requirements.txt, tox.ini.
-    - lxml >=4.2.0,<5
-    - beautifulsoup4 >=4.4.1,<5
-    - html5lib >=0.999,<2
-# Benchmark dependencies.
-    - markov_draftjs ==0.2.0
-    - memray==1.11.0
-    - psutil==5.9.7
-    #- memory_profiler ==0.47
-    #- coverage >=4.1.0
-    #- flake8 >=3.2.0
-    #- isort ==4.2.5
-# For linting and formatting.
-    - ruff ==0.1.9
-    - mypy ==1.8.0
-
+## Required for running the tests.
+#    - pytest ==7.4.3
+#    - pytest-cov ==4.1.0
+#    - pytest-memray ==1.5.0
+#    - tox ==4.11.4
+#    - python-build ==1.0.3
+#    - setuptools ==69.0.3
+## HTML builders.
+## Keep this in sync with the dependencies in setup.py, requirements.txt, tox.ini.
+#    - lxml >=4.2.0,<5
+#    - beautifulsoup4 >=4.4.1,<5
+#    - html5lib >=0.999,<2
+## Benchmark dependencies.
+#    - markov_draftjs ==0.2.0
+#    - memray ==1.11.0
+#    - psutil ==5.9.7
+#    #- memory_profiler ==0.47
+#    #- coverage >=4.1.0
+#    #- flake8 >=3.2.0
+#    #- isort ==4.2.5
+## For linting and formatting.
+#    - ruff ==0.1.9
+#    - mypy ==1.8.0
 
 about:
   home: https://github.com/springload/draftjs_exporter
