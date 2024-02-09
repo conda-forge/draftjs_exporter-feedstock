@@ -7,7 +7,7 @@ Home: https://github.com/springload/draftjs_exporter
 
 Package license: MIT
 
-Summary: Library to convert Draft.js ContentState to HTML
+Summary: Library to convert rich text from Draft.js raw ContentState to HTML
 
 Development: https://github.com/springload/draftjs_exporter
 
