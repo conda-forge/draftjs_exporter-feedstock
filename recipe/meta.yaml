@@ -12,14 +12,19 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python >=3.8
     - pip
+    - setuptools
   run:
     - python >=3.8
+## HTML builders https://github.com/springload/draftjs_exporter/blob/main/setup.py#L46C5-L46C19
+    #- lxml >=4.2.0,<5
+    #- beautifulsoup4 >=4.4.1,<5
+    #- html5lib >=0.999,<2
 
 test:
   imports:
@@ -30,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+## https://github.com/springload/draftjs_exporter/blob/main/requirements.txt
 ## Required for running the tests.
 #    - pytest ==7.4.3
 #    - pytest-cov ==4.1.0
