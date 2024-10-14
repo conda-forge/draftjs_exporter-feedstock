@@ -1,64 +1,45 @@
 {% set name = "draftjs_exporter" %}
-{% set version = "5.0.0" %}
+{% set version = "2.1.7" %}
+{% set sha256 = "5839cbc29d7bce2fb99837a404ca40c3a07313f2a20e2700de7ad6aa9a9a18fb" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/draftjs_exporter-{{ version }}.tar.gz
-  sha256: 2efee45d4bb4c0aaacc3e5ea2983a29a29381e02037f3f92a6b12706d7b87e1e
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  host:
-    - python >=3.8
-    - pip
+  build:
+    - python
     - setuptools
+    - pip
   run:
-    - python >=3.8
-## HTML builders https://github.com/springload/draftjs_exporter/blob/main/setup.py#L46C5-L46C19
-    #- lxml >=4.2.0,<5
-    #- beautifulsoup4 >=4.4.1,<5
-    #- html5lib >=0.999,<2
+    - python
 
 test:
+  requires:
+    - beautifulsoup4 >=4.4.1,<5
+    - html5lib >=0.999,<=1.0b10
+    - lxml >=3.6.0
+    - tox >=2.3.1
+    - markov_draftjs ==0.1.1
+    - memory_profiler ==0.47
+    - psutil ==5.4.1
+    - coverage >=4.1.0
+    - flake8 >=3.2.0
+    - isort ==4.2.5
   imports:
     - draftjs_exporter
     - draftjs_exporter.engines
     - draftjs_exporter.utils
-  commands:
-    - pip check
-  requires:
-    - pip
-## https://github.com/springload/draftjs_exporter/blob/main/requirements.txt
-## Required for running the tests.
-#    - pytest ==7.4.3
-#    - pytest-cov ==4.1.0
-#    - pytest-memray ==1.5.0
-#    - tox ==4.11.4
-#    - python-build ==1.0.3
-#    - setuptools ==69.0.3
-## HTML builders.
-## Keep this in sync with the dependencies in setup.py, requirements.txt, tox.ini.
-#    - lxml >=4.2.0,<5
-#    - beautifulsoup4 >=4.4.1,<5
-#    - html5lib >=0.999,<2
-## Benchmark dependencies.
-#    - markov_draftjs ==0.2.0
-#    - memray ==1.11.0
-#    - psutil ==5.9.7
-#    #- memory_profiler ==0.47
-#    #- coverage >=4.1.0
-#    #- flake8 >=3.2.0
-#    #- isort ==4.2.5
-## For linting and formatting.
-#    - ruff ==0.1.9
-#    - mypy ==1.8.0
 
 about:
   home: https://github.com/springload/draftjs_exporter
