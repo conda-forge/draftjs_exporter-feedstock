@@ -1,6 +1,6 @@
 {% set name = "draftjs_exporter" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "6d29c45ea12fef51fff65665a1c9c41fd5785b46f0d1ee70f2e61af7bfcfe77c" %}
+{% set version = "2.1.7" %}
+{% set sha256 = "5839cbc29d7bce2fb99837a404ca40c3a07313f2a20e2700de7ad6aa9a9a18fb" %}
 
 package:
   name: {{ name|lower }}
@@ -12,17 +12,17 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
-    - python
+    - python >=3.7
     - setuptools
     - pip
   run:
-    - python
+    - python >=3.7
 
 test:
   requires:
@@ -41,13 +41,12 @@ test:
     - draftjs_exporter.engines
     - draftjs_exporter.utils
 
-
 about:
   home: https://github.com/springload/draftjs_exporter
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Library to convert Draft.js ContentState to HTML'
+  summary: Library to convert rich text from Draft.js raw ContentState to HTML
   description: 
     Library to convert Draft.js ContentState to HTML
   doc_url: https://github.com/springload/draftjs_exporter
@@ -56,4 +55,5 @@ about:
 extra:
   recipe-maintainers:
     - cshaley
+    - rxm7706
     - sannykr
