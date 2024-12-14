@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/draftjs_exporter-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/draftjs_exporter-{{ version }}.tar.gz
   sha256: 2efee45d4bb4c0aaacc3e5ea2983a29a29381e02037f3f92a6b12706d7b87e1e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 ## HTML builders https://github.com/springload/draftjs_exporter/blob/main/setup.py#L46C5-L46C19
     #- lxml >=4.2.0,<5
     #- beautifulsoup4 >=4.4.1,<5
@@ -59,6 +59,7 @@ test:
 ## For linting and formatting.
 #    - ruff ==0.1.9
 #    - mypy ==1.8.0
+    - python {{ python_min }}
 
 about:
   home: https://github.com/springload/draftjs_exporter
