@@ -17,14 +17,11 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+    - uv-build >=0.9.21,<0.10.0
     - pip
-    - setuptools
   run:
-    - lxml <7,>=4.2.0
     - python >={{ python_min }}
-    # - lxml <6,>=4.2.0
-    # - html5lib <2,>=0.999
-    # - beautifulsoup4 <5,>=4.4.1
+    # - lxml <7,>=4.2.0
     # - html5lib <2,>=0.999
     # - beautifulsoup4 <5,>=4.4.1
 
