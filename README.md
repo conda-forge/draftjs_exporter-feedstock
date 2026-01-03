@@ -11,10 +11,6 @@ Summary: Library to convert rich text from Draft.js raw ContentState to HTML
 
 Development: https://github.com/springload/draftjs_exporter
 
-Documentation: https://github.com/springload/draftjs_exporter
-
-Library to convert Draft.js ContentState to HTML
-
 Current build status
 ====================
 
