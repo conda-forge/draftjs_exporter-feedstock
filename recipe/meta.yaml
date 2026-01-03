@@ -1,5 +1,5 @@
 {% set name = "draftjs_exporter" %}
-{% set version = "5.1.0" %}
+{% set version = "5.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/draftjs_exporter-{{ version }}.tar.gz
-  sha256: 9f44b8dcecb702540e3aab24af2fad8683aec910fe0034c12cfab5d716ac5f84
+  sha256: 4d665f8c75fd173d2c99326405300e8defcf4961b9b2f16ff117486489c6760b
 
 build:
   noarch: python
@@ -17,12 +17,11 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+    - uv-build >=0.9.21,<0.10.0
     - pip
-    - setuptools
   run:
-    - lxml
     - python >={{ python_min }}
-    # - lxml <6,>=4.2.0
+    # - lxml <7,>=4.2.0
     # - html5lib <2,>=0.999
     # - beautifulsoup4 <5,>=4.4.1
 
